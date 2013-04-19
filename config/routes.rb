@@ -1,5 +1,5 @@
 RunnersLog::Application.routes.draw do
-  devise_for :users
+  devise_for :runners
   resources :run_histories
 
   get "home/index"
