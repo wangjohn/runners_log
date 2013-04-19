@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  windy: false
+  treadmill: false
+  hilly: false
+  rainy: false
+
+two:
+  windy: false
+  treadmill: false
+  hilly: false
+  rainy: false

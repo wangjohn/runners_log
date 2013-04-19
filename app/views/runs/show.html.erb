@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @run.distance %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @run.duration %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @run.comments %>
+</p>
+
+<%= link_to 'Edit', edit_run_path(@run) %> |
+<%= link_to 'Back', runs_path %>
