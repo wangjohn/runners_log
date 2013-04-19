@@ -1,0 +1,29 @@
+<%= form_for(@run_history) do |f| %>
+  <% if @run_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@run_history.errors.count, "error") %> prohibited this run_history from being saved:</h2>
+
+      <ul>
+      <% @run_history.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_duration %><br>
+    <%= f.text_field :avg_duration %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_distance %><br>
+    <%= f.text_field :avg_distance %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

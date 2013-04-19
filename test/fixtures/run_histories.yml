@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  avg_duration: 1.5
+  avg_distance: 1.5
+
+two:
+  user_id: 1
+  avg_duration: 1.5
+  avg_distance: 1.5

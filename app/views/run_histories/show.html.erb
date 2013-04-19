@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @run_history.user_id %>
+</p>
+
+<p>
+  <strong>Avg duration:</strong>
+  <%= @run_history.avg_duration %>
+</p>
+
+<p>
+  <strong>Avg distance:</strong>
+  <%= @run_history.avg_distance %>
+</p>
+
+<%= link_to 'Edit', edit_run_history_path(@run_history) %> |
+<%= link_to 'Back', run_histories_path %>

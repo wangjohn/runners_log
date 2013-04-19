@@ -1,4 +1,6 @@
 RunnersLog::Application.routes.draw do
+  resources :run_histories
+
   get "home/index"
   resources :runs
 
