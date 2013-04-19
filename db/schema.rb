@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130419203925) do
+ActiveRecord::Schema.define(version: 20130419204218) do
 
   create_table "email_addresses", force: true do |t|
     t.string   "first_name"
@@ -40,11 +40,11 @@ ActiveRecord::Schema.define(version: 20130419203925) do
   end
 
   create_table "run_histories", force: true do |t|
-    t.integer  "user_id"
     t.float    "avg_duration"
     t.float    "avg_distance"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "runner_id"
   end
 
   create_table "run_infos", force: true do |t|
@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 20130419203925) do
     t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
+    t.integer  "runner_id"
   end
 
   create_table "users", force: true do |t|
