@@ -16,13 +16,31 @@
     <%= f.text_field :distance %>
   </div>
   <div class="field">
-    <%= f.label :duration %><br>
+    <%= f.label :duration, "Duration of Run" %><br>
     <%= f.text_field :duration %>
   </div>
   <div class="field">
     <%= f.label :comments %><br>
     <%= f.text_area :comments %>
   </div>
+  <%= f.fields_for :run_info do |run_info| -%>
+    <div class="field">
+      <%= run_info.label :windy -%>
+      <%= run_info.check_box :windy -%>
+    </div>
+    <div class="field">
+      <%= run_info.label :treadmill -%>
+      <%= run_info.check_box :treadmill -%>
+    </div>
+    <div class="field">
+      <%= run_info.label :hilly -%>
+      <%= run_info.check_box :hilly -%>
+    </div>
+    <div class="field">
+      <%= run_info.label :rainy -%>
+      <%= run_info.check_box :rainy -%>
+    </div>
+  <% end -%>
   <div class="actions">
     <%= f.submit %>
   </div>

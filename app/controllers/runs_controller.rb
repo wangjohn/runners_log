@@ -15,6 +15,8 @@ class RunsController < ApplicationController
   # GET /runs/new
   def new
     @run = Run.new
+    @run_info = RunInfo.new
+    @run.run_info = @run_info
   end
 
   # GET /runs/1/edit
@@ -41,6 +43,7 @@ class RunsController < ApplicationController
   # PATCH/PUT /runs/1.json
   def update
     respond_to do |format|
+      @run.set_duration(duration_param)
       if @run.update(run_params)
         format.html { redirect_to @run, notice: 'Run was successfully updated.' }
         format.json { head :no_content }
@@ -69,6 +72,10 @@ class RunsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def run_params
-      params.require(:run).permit(:distance, :duration, :comments)
+      params.require(:run).permit(:distance, :comments)
+    end
+
+    def duration_param
+      params.require(:run)[:duration]
     end
 end

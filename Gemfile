@@ -4,7 +4,7 @@ gem 'rails',     github: 'rails/rails'
 gem 'arel',      github: 'rails/arel'
 gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
 
-gem 'sqlite3'
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.

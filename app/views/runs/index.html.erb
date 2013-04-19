@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Date</th>
       <th>Distance</th>
       <th>Duration</th>
       <th>Comments</th>
@@ -15,8 +16,9 @@
   <tbody>
     <% @runs.each do |run| %>
       <tr>
+        <td><%= time_ago_in_words(run.created_at) -%> ago</td>
         <td><%= run.distance %></td>
-        <td><%= run.duration %></td>
+        <td><%= run_duration(run) %></td>
         <td><%= run.comments %></td>
         <td><%= link_to 'Show', run %></td>
         <td><%= link_to 'Edit', edit_run_path(run) %></td>
